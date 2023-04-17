@@ -11,22 +11,30 @@ function writePassword() {
 }
 //find users preferances
 function generatePassword(){
-  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   const lowercase = "abcdefghijklmnopqrstuvwxyz"
+  const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   const numbers = "0123456789"
   const specialCharacters = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
-  var uppercase = false;
-  var lowercase = false;
-  var numbers = false;
-  var special = false;
-  var length = 0
+  //used up to stand for user preferrance
+  var upLowercase = false;
+  var upUppercase = false;
+  var upNumbers = false;
+  var upSpecial = false;
+  var upLength = 0;
+
+  upLength = window.prompt("How long would you like your password to be?")
+  if (upLength <8 || upLength > 128) {
+    window.alert("Password must include between 8 and 128 characters");
+
+    return ('')
+  }
 
 
 
 
   
-  return ('')
+
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
