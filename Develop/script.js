@@ -34,7 +34,8 @@ function generatePassword(){
   upUppercase = window.confirm("please select OK to include uppercase characters in your password");
   upNumbers = window.confirm("please select OK to include numbers in your password");
   upSpecial = window.confirm("please select OK to include special characters in your password");
- 
+
+ // to avoid user clicking no to all character types...
   if (upLowercase === false && upUppercase === false && upNumbers === false && upSpecial === false) {
     window.alert("you must select at least one type of characters to include in your password");
     return;
