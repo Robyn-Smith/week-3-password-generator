@@ -41,6 +41,31 @@ function generatePassword(){
     return;
   }
 
+  // up characters standng for user's preffered characters, obtainable characters following users selection
+  var password = "";
+  const upCharacters = [];
+
+
+  // or could use concat ... this merges all preffered characters, selected by user, and puts them in the same array
+  if (upLowercase) {
+    upCharacters.push(lowercase.split(""));
+  }
+  if (upUppercase) {
+    upCharacters.push(uppercase.split(""));
+  }
+  if (upSpecial) {
+    upCharacters.push(specialCharacters.split(""));
+  }
+  if (upNumbers) {
+    upCharacters.push(numbers.split(""));
+  }
+
+  //random characters selected and multiplied by preferred length and added into password
+  for (var i = 0; i < upLength; i++) {
+    var randomCharacter = upCharacters[Math.floor(Math.random() * upCharacters.length)];
+    password += randomCharacter[Math.floor(Math.random () * randomCharacter.length)];
+  }
+
   return ('')
   
 
