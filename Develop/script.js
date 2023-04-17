@@ -16,7 +16,7 @@ function generatePassword(){
   const numbers = "0123456789"
   const specialCharacters = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
-  //used up to stand for user preferrance
+  //used 'up' to stand for user preferrance
   var upLowercase = false;
   var upUppercase = false;
   var upNumbers = false;
@@ -26,13 +26,16 @@ function generatePassword(){
   upLength = window.prompt("How long would you like your password to be?")
   if (upLength <8 || upLength > 128) {
     window.alert("Password must include between 8 and 128 characters");
-
-    return ('')
+    return;
   }
 
-
-
-
+  //used to find out user preferrances...
+  upLowercase = window.confirm("please select OK to include lowercase characters in your password");
+  upUppercase = window.confirm("please select OK to include uppercase characters in your password");
+  upNumbers = window.confirm("please select OK to include numbers in your password");
+  upSpecial = window.confirm("please select OK to include special characters in your password");
+ 
+  return ('')
   
 
 }
