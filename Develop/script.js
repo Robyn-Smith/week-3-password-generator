@@ -66,7 +66,7 @@ function generatePassword(){
     password += randomCharacter[Math.floor(Math.random () * randomCharacter.length)];
   }
 
-  return ('')
+  return (password)
   
 
 }
