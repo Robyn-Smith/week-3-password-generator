@@ -1,7 +1,6 @@
-// Assignment Code
+// generate btn refers to the generate button in html
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -9,7 +8,11 @@ function writePassword() {
   passwordText.value = password;
 
 }
-//find users preferances
+
+//all possible characters are listed in sepearte arrays according to their category, such as lowercase letters.
+// The seperation of categories is important to distinguish between the different characters and use or illiminate 
+//according to the users preferreances.
+
 function generatePassword(){
   const lowercase = "abcdefghijklmnopqrstuvwxyz"
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
