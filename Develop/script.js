@@ -17,10 +17,10 @@ function generatePassword(){
   const specialCharacters = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
   //used 'up' to stand for user preferrance
-  var upLowercase = false;
-  var upUppercase = false;
-  var upNumbers = false;
-  var upSpecial = false;
+  var upLowercase = true;
+  var upUppercase = true;
+  var upNumbers = true;
+  var upSpecial = true;
   var upLength = 0;
 
   upLength = window.prompt("How long would you like your password to be?")
