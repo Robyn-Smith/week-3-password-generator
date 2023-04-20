@@ -53,7 +53,7 @@ function generatePassword(){
   const upCharacters = [];
 
 
-  // or could use concat ... this merges all preffered characters, selected by user, and puts them in the same array
+  // this merges all preffered characters, selected by user, and adds them into the same array
   if (upLowercase) {
     upCharacters.push(lowercase.concat(""));
   }
