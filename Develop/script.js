@@ -11,14 +11,14 @@ function writePassword() {
 
 //all possible characters are listed in sepearte arrays according to their category, such as lowercase letters.
 // The seperation of categories is important to distinguish between the different characters and use or illiminate 
-//according to the users preferreances.
+//according to the users preferences.
 function generatePassword(){
   const lowercase = "abcdefghijklmnopqrstuvwxyz"
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   const numbers = "0123456789"
   const specialCharacters = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
-  //used 'up' within variable name to stand for user preferrance. All variables have been given a value so that the 
+  //used 'up' within variable name to stand for user preference. All variables have been given a value so that the 
   //JavaScript can recognise the different data types, all of which are boolean other than the length which is a number.
   var upLowercase = true;
   var upUppercase = true;
@@ -27,6 +27,9 @@ function generatePassword(){
   var upLength = 0;
 
   //This prompt has been used so that the user can specify how many characters they would like to include in their password.
+  //however an if statement has been used to cap the length of the password to be between 8 and 128 characters long.
+  //the if statement alerts the user with a message that their password must be between 8 and 128 characters if the answer 
+  //provided by the user is not within these parameters.
   upLength = window.prompt("How long would you like your password to be?")
   if (upLength <8 || upLength > 128) {
     window.alert("Password must include between 8 and 128 characters");
