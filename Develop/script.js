@@ -48,16 +48,16 @@ function generatePassword(){
 
   // or could use concat ... this merges all preffered characters, selected by user, and puts them in the same array
   if (upLowercase) {
-    upCharacters.push(lowercase.split(""));
+    upCharacters.push(lowercase.concat(""));
   }
   if (upUppercase) {
-    upCharacters.push(uppercase.split(""));
+    upCharacters.push(uppercase.concat(""));
   }
   if (upSpecial) {
-    upCharacters.push(specialCharacters.split(""));
+    upCharacters.push(specialCharacters.concat(""));
   }
   if (upNumbers) {
-    upCharacters.push(numbers.split(""));
+    upCharacters.push(numbers.concat(""));
   }
 
   //random characters selected and multiplied by preferred length and added into password
