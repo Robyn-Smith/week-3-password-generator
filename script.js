@@ -29,7 +29,11 @@ function generatePassword(){
   //This prompt has been used so that the user can specify how many characters they would like to include in their password.
   //however an if statement has been used to cap the length of the password to be between 8 and 128 characters long.
   //the if statement alerts the user with a message that their password must be between 8 and 128 characters if the answer 
-  //provided by the user is not within these parameters.
+  //provided by the user is not within these parameters. The function isNaN is added to the if statement to ensure that the 
+  //user does not use non numeric characters when inputing a prefered password length. If the user does not use numeric 
+  //characters they will be alerted to do so. The symbol || stands for 'or' meaning the if statement is checking if 
+  //any of these statements are entered incorrectly.
+
   upLength = window.prompt("How long would you like your password to be?")
   if (upLength <8 || upLength > 128 || isNaN(upLength)) {
     window.alert("Password must include between 8 and 128 characters, this must be written in numeric characters");
