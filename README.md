@@ -7,3 +7,5 @@ This website generates passwords according to the users preferences. When the us
 This webpage contains a descriptive title, two large headings, two boxes (one containing the content and one containing the password result) and a large green generate button. When the button has been activated the user will see the series of prompts, as seen in the picture below. 
 
 ![A screenshot of the password generator webpage, containing the title, a large heading, a dotted border box with the words 'your secure password' inside, a generate button and a prompt asking whether or not the user would like to include lowercase characters in their password.](/Assets/screenshot-password.jpg)
+
+https://robyn-smith.github.io/week-3-password-generator/
