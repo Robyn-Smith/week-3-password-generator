@@ -31,8 +31,8 @@ function generatePassword(){
   //the if statement alerts the user with a message that their password must be between 8 and 128 characters if the answer 
   //provided by the user is not within these parameters.
   upLength = window.prompt("How long would you like your password to be?")
-  if (upLength <8 || upLength > 128) {
-    window.alert("Password must include between 8 and 128 characters");
+  if (upLength <8 || upLength > 128 || isNaN(upLength)) {
+    window.alert("Password must include between 8 and 128 characters, this must be written in numeric characters");
     return;
   }
 
